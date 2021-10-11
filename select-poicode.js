@@ -23,6 +23,9 @@ class SelectPOICode extends SelectTree {
     super.init(csv);
   }
   set value(v) {
+    if (!this.csv) {
+      return;
+    }
     v += " ";
     const line = this.csv.find(l => l[1].startsWith(v));
     if (!line) {
