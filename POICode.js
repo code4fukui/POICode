@@ -7,8 +7,8 @@ class POICode {
     if (POICode.csv) {
       return POICode.csv;
     }
-    //const url = "https://code4fukui.github.io/POICode/";
-    const url = "";
+    const url = "https://code4fukui.github.io/POICode/";
+    //const url = "";
     const csv = await CSV.fetch(url + POICode.fn);
     csv.forEach(line => line[1] = parseInt(line[1]));
     POICode.csv = csv;

@@ -4,7 +4,7 @@
 <link rel="stylesheet" href="https://unpkg.com/sakura.css/css/sakura.css" type="text/css">
 
 </head>
-<body style="margin: 2em;">
+<body style="margin: 2em; max-width: 90vw;">
 
 <h1>select-poicode tag</h1>
 <script type="module" src="./select-poicode.js"></script>
@@ -24,6 +24,11 @@ onload = async () => {
   };
 };
 </script>
+
+<hr>
+
+<script type="module" src="https://code4sabae.github.io/js/csv-viewer.js"></script>
+<csv-viewer src=./poicode.csv></csv-viewer>
 
 <hr>
 <style>a { color: gray !important }</style>

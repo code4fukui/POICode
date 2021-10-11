@@ -18,3 +18,6 @@ Deno.test("find", async () => {
   ];
   t.assertEquals(await POICode.find("遊戯"), expected);
 });
+Deno.test("all", async () => {
+  t.assertEquals((await POICode.find("")).length, 651);
+});

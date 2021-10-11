@@ -12,8 +12,8 @@ class SelectPOICode extends SelectTree {
     return [l[0], l[1] + " " + l[2] + (l[3] && l[2] != l[3] ? " (" + l[3] + ")" : ""), l[2]];
   }
   async init() {
-    //const url = "https://code4fukui.github.io/POICode/";
-    const url = "";
+    const url = "https://code4fukui.github.io/POICode/";
+    //const url = "";
     const csv = await CSV.fetch(url + POICode.fn);
     for (let i = 0; i < csv.length; i++) {
       const l = csv[i];
