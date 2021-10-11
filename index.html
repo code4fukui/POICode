@@ -1,0 +1,32 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width">
+<title>select-poicode tag</title>
+
+<link rel="stylesheet" href="https://unpkg.com/sakura.css/css/sakura.css" type="text/css">
+
+</head>
+<body style="margin: 2em;">
+
+<h1>select-poicode tag</h1>
+<script type="module" src="./select-poicode.js"></script>
+<select-poicode id=sel></select-poicode>
+<div id=value style="border:1px solid black; margin: 1em 0; padding: .5em;"></div>
+
+<input id=code value="2409"><button id=btn>set value</button>
+
+<script type="module">
+onload = async () => {
+  sel.onchange = () => {
+    value.textContent = sel.value;
+  };
+
+  btn.onclick = () => {
+    sel.value = code.value;
+  };
+};
+</script>
+
+<hr>
+<style>a { color: gray !important }</style>
+Data: <a href=https://github.com/code4fukui/BaseRegistry/blob/main/%E8%A1%8C%E6%94%BF%E5%9F%BA%E6%9C%AC%E6%83%85%E5%A0%B1%E3%83%87%E3%83%BC%E3%82%BF%E9%80%A3%E6%90%BA%E3%83%A2%E3%83%87%E3%83%AB-POI%E3%82%B3%E3%83%BC%E3%83%89.md>行政基本情報データ連携モデル POIコード</a><br>
+App: <a href=https://fukuno.jig.jp/3365>福野泰介の一日一創</a> (<a href=https://github.com/code4fukui/POICode>POICode - src on GitHub</a>)<br>
+</body>
