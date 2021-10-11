@@ -1,11 +1,11 @@
-# IndustryCode
- 
-https://code4fukui.github.io/IndustryCode/
+# POICode
+
+https://code4fukui.github.io/POICode/
 
 ## usage
 
 ```js
-await IndustryCode.encode("高等専門学校");
-await IndustryCode.decode("8163");
-await IndustryCode.find("ソフトウェア");
+await POICode.encode("高等専門学校");
+await POICode.decode("1508");
+await POICode.find("学校");
 ```
