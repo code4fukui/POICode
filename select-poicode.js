@@ -9,7 +9,8 @@ class SelectPOICode extends SelectTree {
     this.init();
   }
   _formatLine(l) {
-    return [l[0], l[1] + " " + l[2] + (l[3] && l[2] != l[3] ? " (" + l[3] + ")" : ""), l[2]];
+    //return [l[0], l[1] + " " + l[2] + (l[3] && l[2] != l[3] ? " (" + l[3] + ")" : ""), l[2]];
+    return [l[0], l[1] + " " + l[2], l[2]]; // without description
   }
   async init() {
     const url = "https://code4fukui.github.io/POICode/";
