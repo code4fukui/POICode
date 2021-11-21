@@ -4,7 +4,7 @@ import { POICode } from "./POICode.js";
 import { CSV } from "https://js.sabae.cc/CSV.js";
 
 class SelectPOICode extends SelectTree {
-  constructor() {
+  constructor(opts) {
     super(null, { showLabel: false });
     this.init();
   }
@@ -12,7 +12,15 @@ class SelectPOICode extends SelectTree {
     //return [l[0], l[1] + " " + l[2] + (l[3] && l[2] != l[3] ? " (" + l[3] + ")" : ""), l[2]];
     return [l[0], l[1] + " " + l[2], l[2]]; // without description
   }
-  async init() {
+  async init(opts) {
+    if (opts) {
+      for (const name in opts) {
+        if (opts[name] != null) {
+          this.setAttribute(name, opts[name]);
+        }
+      }
+    }
+
     const url = "https://code4fukui.github.io/POICode/";
     //const url = "";
     const csv = await CSV.fetch(url + POICode.fn);
@@ -25,6 +33,7 @@ class SelectPOICode extends SelectTree {
   }
   set value(v) {
     if (!this.csv) {
+      this.getAttribute("value", v);
       return;
     }
     v += " ";
