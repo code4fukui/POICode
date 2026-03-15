@@ -1,5 +1,7 @@
 # POICode
 
+> 日本語のREADMEはこちらです: [README.ja.md](README.ja.md)
+
 https://code4fukui.github.io/POICode/
 
 ## Usage
