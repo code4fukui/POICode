@@ -2,7 +2,7 @@
 
 > 日本語のREADMEはこちらです: [README.ja.md](README.ja.md)
 
-https://code4fukui.github.io/POICode/
+A JavaScript library for handling Point of Interest (POI) codes used in various mapping applications. It allows you to encode/decode POI codes and search for related POI codes by keyword.
 
 ## Usage
 
@@ -16,8 +16,8 @@ console.log(await POICode.find("学校"));
 
 ## Data / API
 
-This project uses a CSV file hosted at https://code4fukui.github.io/POICode/poicode.csv, which contains a list of POI (Point of Interest) codes and names.
+This project uses a CSV file hosted at https://code4fukui.github.io/POICode/poicode.csv, which contains a list of POI codes and names.
 
 ## License
 
-MIT License
+MIT License — see [LICENSE](LICENSE).
